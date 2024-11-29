@@ -7,7 +7,9 @@ authors = [
     { name = "Kristian Sloth Lauszus", email = "lauszus@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "package1",
+]
 
 [project.scripts]
 package2 = "package2:main"
@@ -15,3 +17,6 @@ package2 = "package2:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+package1 = { path = "../package1" }
